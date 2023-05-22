@@ -1,0 +1,80 @@
+<div class="ESFContentBlock">
+  <div class="logo-desc blk-item">
+    <div class="logo">
+      <img
+        src="https://zbzznxxktcx7ngehlqxzuw.on.drv.tw/HOSTING/images/ego_sam-logo-172px-by-nmk.png?2305210250"
+      />
+    </div>
+    <div class="desc">
+      <span class="txt">
+        EGO SAM est une plateforme d'employabilité conçue pour aider les
+        professionnels à promouvoir leurs compétences, développer leur carrière
+        et trouver de nouvelles opportunités.
+      </span>
+    </div>
+  </div>
+  <div class="menu blk-item">
+    <div class="MBlk-Title">
+      <span class="tstr">LIENS UTILES</span>
+    </div>
+    <ul class="MBlk-Links">
+      <li class="Accueil">
+        <a class="Accueil" href="https://egosam.numeak.com/p/accueil.html">Page d'Accueil</a>
+      </li>
+      <li class="Svc-CVPLM">
+        <a class="Svc-CVPLM" href="https://egosam.numeak.com/2023/04/svc-cvp-lm.html">Service de CV Pro et LM</a>
+      </li>
+      <li class="Recrutements">
+        <a class="Recrutements" href="#">Recrutements</a>
+      </li>
+      <li class="FocusCoaching">
+        <a class="FocusCoaching" href="#">Focus Coaching</a>
+      </li>
+      <li class="QSN">
+        <a class="QSN" href="#">Qui sommes-nous ?</a>
+      </li>
+      <li class="CGU">
+        <a class="CGU" href="#">Conditions d'utilisation</a>
+      </li>
+    </ul>
+  </div>
+  <div class="ContactUS blk-item">
+    <div class="MBlk-Title c-us">
+      <span class="tstr">NOUS CONTACTER</span>
+    </div> 
+    <ul class="C-US-ItemsBlk">
+      <li class="lbk-item tel">
+        <span class="tel-blk">
+          <span class="tel-str">Téléphones</span>
+          <a class="tel" href="tel:+2250789399632">(+225) 07 89 39 9632</a>
+          <a class="tel" href="tel:+2250504309474">(+225) 05 04 30 9474</a>
+        </span>
+      </li>
+      <li class="lbk-item email">
+        <span class="tel-blk">
+          <span class="email-str">Adresses e-mail</span>
+          <a class="email" href="mailto:s2cv.egosam@gmail.com">s2cv.egosam@gmail.com</a>
+          <a class="email" href="mailto:contact@egosam.numeak.com">contact@egosam.numeak.com</a>
+        </span>
+      </li>
+      <!-- RESEAUX SOCIAUX -->
+      <li class="rs-items lbk-item">
+        <span class="rs-item">
+          <a class="whatsapp" href="https://bit.ly/3yTYmoI" title="Contactez-nous sur WhtatsApp" target="_blank"></a>
+        </span>
+        <span class="rs-item">
+          <a class="facebook" href="https://web.facebook.com/egosam.me" title="Suivez-nous sur Facebook" target="_blank"></a>
+        </span>
+        <span class="rs-item">
+          <a class="linkedin" href="https://www.linkedin.com/company/egosam/" title="Suivez-nous sur LinkedIn" target="_blank"></a>
+        </span>
+        <span class="rs-item">
+          <a class="telegram" href="https://t.me/forum_egosam" title="Rejoignez notre forum sur Telegram" target="_blank"></a>
+        </span>
+        <span class="rs-item">
+          <a class="twitter" href="https://twitter.com/NumeakTLW" title="Suivez-nous sur Twitter" target="_blank"></a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
