@@ -1,3 +1,5 @@
+/* egosam-init.css */
+
 html .page_body {
   width: 100%;
   overflow: hidden
@@ -91,7 +93,7 @@ body .header-widget p.egosam-homePage-wtd {
   display: block !important; 
   box-sizing: border-box; 
   border: 0; 
-  padding : 3px 0
+  padding : 6px 0
 } 
 
 #sidebar_bottom li a {
