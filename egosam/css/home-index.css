@@ -68,15 +68,18 @@ body .ESHomePageCtner {
 }
 
 #ESHomePage section.banner .slide .slide--1__darkbg {
-  background: url("https://raw.githubusercontent.com/fdmea2k/numeak/main/egosam/images/home-slides/cvqde-avr-2023.jpg") no-repeat;
+  background: url("https://raw.githubusercontent.com/fdmea2k/numeak/main/egosam/images/home-slides/cvqde-avr-2023.jpg") no-repeat; 
+  background-size: 100% 100%;
 }
 
 #ESHomePage section.banner .slide .slide--2__darkbg {
-  background: url("https://raw.githubusercontent.com/fdmea2k/numeak/main/egosam/images/home-slides/watw.jpg") no-repeat;
+  background: url("https://raw.githubusercontent.com/fdmea2k/numeak/main/egosam/images/home-slides/watw.jpg") no-repeat; 
+  background-size: 100% 100%;
 }
 
 #ESHomePage section.banner .slide .slide--3__darkbg {
-  background: url("https://raw.githubusercontent.com/fdmea2k/numeak/main/egosam/images/home-slides/svc-b-mars-2023.jpg") no-repeat;
+  background: url("https://raw.githubusercontent.com/fdmea2k/numeak/main/egosam/images/home-slides/svc-b-mars-2023.jpg") no-repeat; 
+  background-size: 100% 100%;
 }
 
 /* OUR SERVICES */
