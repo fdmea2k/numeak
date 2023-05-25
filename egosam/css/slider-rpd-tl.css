@@ -1,0 +1,180 @@
+$bgClr: rgba(#0b0f27, .83);
+$txtClr: #fff;
+$animSpd: 750 * 1ms; // Change also in JS
+
+$numOfSlides: 5; // Add new city in the array in JS and a new image below
+
+$bgPics: (
+url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--1-min-min.jpg') center center no-repeat,
+url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--2-min-min.jpg') center center no-repeat,	url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--3-min-min.jpg') center center no-repeat,
+url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--4-min-min.jpg') center center no-repeat,
+url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg') center center no-repeat
+);
+
+@mixin mediaMaxW($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+#ESHomePage section.banner .cont {
+	position: relative;
+	overflow: hidden; 
+	height: 100%;
+}
+
+#ESHomePage section.banner .slider {
+	position: relative;
+	height: 100%;
+	transform: translate3d(0, 0, 0);
+	will-change: transform;
+	cursor: all-scroll;
+	user-select: none; 
+	box-sizing: border-box;
+}
+
+#ESHomePage section.banner .slider.animation {
+	transition: transform 750ms ease-in-out;
+} 
+
+#ESHomePage section.banner .slider.animation .slide__darkbg {
+	transition: transform 750ms ease-in-out;
+}
+
+#ESHomePage section.banner .slider.animation .slide__text {
+	
+}
+
+#ESHomePage section.banner .slider.animation .slide__letter {
+	
+}
+
+#ESHomePage section.banner .slide {
+	position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#ESHomePage section.banner .slide .slide--1__darkbg {
+	left: 0%;
+  background: url("https://zbzznxxktcx7ngehlqxzuw.on.drv.tw/HOSTING/images/home-slides/cvqde-avr-2023.jpg") no-repeat;
+  transform: translate3d(0, 0, 0);
+  will-change: transform; 
+  height: 100%; 
+  width: 100%;
+	background-size: 100%;
+}
+
+#ESHomePage section.banner .slide .slide--2__darkbg {
+	left: 0%;
+  background: url("https://zbzznxxktcx7ngehlqxzuw.on.drv.tw/HOSTING/images/home-slides/watw.jpg") no-repeat;
+  transform: translate3d(0, 0, 0);
+  will-change: transform; 
+  height: 100%; 
+  width: 100%;
+   background-size: 100%;
+}
+
+#ESHomePage section.banner .slide .slide--3__darkbg {
+	left: 0%;
+  background: url("https://zbzznxxktcx7ngehlqxzuw.on.drv.tw/HOSTING/images/home-slides/svc-b-mars-2023.jpg") no-repeat;
+  transform: translate3d(0, 0, 0);
+  will-change: transform; 
+  height: 100%; 
+  width: 100%;
+	background-size: 100%;
+}
+
+#ESHomePage section.banner .nav {
+	position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style-type: none;
+  z-index: 10; 
+}
+
+#ESHomePage section.banner .nav .nav__slide {
+	position: relative;
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		margin-left: 10px;
+		cursor: pointer;
+}
+
+#ESHomePage section.banner .nav .nav__slide:hover:after {
+   transform: translate(-50%, -50%) scale(1, 1);
+  opacity: 1;
+}
+
+#ESHomePage section.banner .nav .nav__slide:after {
+	content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0, 0);
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0;
+  transition: 300ms;
+}
+
+#ESHomePage section.banner .slide--1 { 
+  position: absolute;
+  left: 0%;
+}
+#ESHomePage section.banner .slide--2 { 
+  position: absolute;
+  left: 100%;
+}
+#ESHomePage section.banner .slide--3 { 
+ position: absolute;
+  left: 200%;
+}
+
+#ESHomePage section.banner .nav .nav__slide.nav__slide--1 {
+	margin-left: 0;
+}
+
+#ESHomePage section.banner li.nav__slide.nav-active:after {
+	transform: translate(-50%, -50%) scale(1,1);
+	opacity: 1;
+}
+
+#ESHomePage section.banner .side-nav {
+	position: absolute;
+	width: 10%;
+	height: 100%;
+	top: 0;
+	z-index: 20;
+	cursor: pointer;
+	opacity: 0;
+	transition: 300ms;
+} 
+
+#ESHomePage section.banner .side-nav:hover {
+	opacity: .5;
+}
+
+#ESHomePage section.banner .side-nav.side-nav--right {
+  right: 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #012060 100%);
+}
+#ESHomePage section.banner .side-nav.side-nav--left {
+  left: 0;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #012060 100%);
+} 
+
+html {
+  box-sizing: border-box;
+	font: {
+		family: 'Open Sans', sans-serif;
+	}
+}

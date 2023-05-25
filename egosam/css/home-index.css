@@ -1,0 +1,196 @@
+/* HOME PAGE */  
+
+body .ESHomePageCtner {
+  background: rgb(244,244,244); 
+  width: 100%; 
+}
+
+#ESHomePage {
+  width: 100%; 
+  background: rgb(244,244,244); 
+}
+
+/* BANNER TOP : WITH SLIDER */
+
+#ESHomePage section.banner {
+  width: 100%;
+  position: relative;
+} 
+
+#ESHomePage section.banner .slideContainer {
+  width: 100%;
+  overflow: hidden ;
+}
+
+#ESHomePage section.banner .cont {
+  width: 100%;
+  overflow: hidden ;
+}
+
+#ESHomePage section.banner .slider {
+  width: 100%; 
+  position: relative;
+  height: 100%;
+}
+
+#ESHomePage section.banner .nav {
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	transform: translateX(-50%);
+	list-style-type: none;
+	z-index: 10;
+}
+
+#ESHomePage section.banner h1.banner-title {
+  color: #012060; 
+  font-family: 'Rubik', sans-serif; 
+  width: 100%;
+  margin: 0;
+  box-sizing : border-box; 
+  padding : 30px 14px;
+  text-align: center;
+  font-size: 2.5em; 
+  line-height : 1.2em
+} 
+
+#ESHomePage section.banner span.desc {
+  color: #202125; 
+  font-family: 'Rubik', sans-serif; 
+  width: 100%;
+  margin: 0;
+  box-sizing : border-box; 
+  padding : 0 14px;
+  text-align: center;
+  font-size: 1.5em; 
+  display: block;
+  line-height : 1.2em
+}
+
+/* OUR SERVICES */
+
+#ESHomePage section.our-services {
+  width: 100%;
+  position: relative;
+} 
+
+#ESHomePage section.our-services h1.os-title {
+  color: #afb803; 
+  font-family: 'Rubik', sans-serif; 
+  width: 100%;
+  margin: 0;
+  box-sizing : border-box; 
+  padding : 30px 14px;
+  text-align: center;
+  font-size: 1.5em; 
+  line-height : 1.2em; 
+  text-transform: uppercase;
+}
+
+#ESHomePage section.our-services .svc-list-block {
+  position: relative;
+  width: 100%;
+  border: 0;
+  box-sizing: border-box; 
+  padding: 0 14px;
+} 
+
+#ESHomePage section.our-services .svc-item {
+  position: relative;
+  border: 0; margin: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  width: calc((100% - 28px) / 3); 
+  margin-right: 5px; 
+  vertical-align: top; 
+  text-align: left;
+} 
+
+#ESHomePage section.our-services .svc-item span.svc-item-title {
+  position: relative; 
+  border: 0; margin: 0;
+  box-sizing: border-box; 
+  display: block; 
+  padding: 0 30px 0 40px; 
+  line-height: 1.4em; 
+  color: #012060 ; 
+  font-family: 'Rubik', sans-serif; 
+  font-size: 1.1em ; 
+  min-height: 42px;
+}
+
+#ESHomePage section.our-services .svc-item span.svc-item-title:before { 
+  font-size: 2em; 
+  font-family: 'ocis-icon-fonts';
+  color: #afb803 ; 
+  display: block; 
+  position: absolute;
+  left: 0; top: 6px;
+}
+
+#ESHomePage section.our-services .svc-item.svc-2cvplm span.svc-item-title:before {
+  content: '\e854';  
+}
+
+#ESHomePage section.our-services .svc-item.svc-2pee span.svc-item-title:before {
+  content: '\e86d';
+}
+
+#ESHomePage section.our-services .svc-item.svc-2cc span.svc-item-title:before {
+  content: '\f0e4'; 
+}
+
+#ESHomePage section.our-services .svc-item span.svc-item-desc {
+  display: inline-block; 
+  border: 0; margin: 0;
+  box-sizing: border-box; 
+  padding: 8px 20px 8px 0; 
+  font-family: 'Rubik', sans-serif; 
+  font-size: 0.92em ;
+  color: #202125 ; 
+  line-height: 1.3em;
+} 
+
+#ESHomePage section.our-services a,
+#ESHomePage section.our-services a:visited {
+  color: #012060 ;
+}
+
+#ESHomePage section.our-services a:hover {
+  color: #afb803 ;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 720px) {
+  #ESHomePage section.banner h1.banner-title {
+    font-size: 1.5em; 
+    padding : 20px 14px;
+  } 
+  
+  #ESHomePage section.banner span.desc {
+    font-size: 1.3em;
+  }
+  
+  #ESHomePage section.our-services .svc-item {
+    width: 100%; 
+    text-align: center; 
+  }
+  
+  #ESHomePage section.our-services .svc-item span.svc-item-title:before {
+    position: relative;
+    left: 0; top: 0; 
+    margin: 15px 0; 
+    font-size: 3em; 
+  } 
+  #ESHomePage section.our-services .svc-item span.svc-item-title:before, 
+  #ESHomePage section.our-services .svc-item span.svc-item-title {
+    
+  }
+  
+  #ESHomePage section.our-services .svc-item span.svc-item-desc {
+    display: block;
+  }
+}
+
+
