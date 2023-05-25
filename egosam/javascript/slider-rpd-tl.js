@@ -16,7 +16,7 @@ $(document).ready(function initAnimation() {
 	let diff = 0;
 	
 	// Generating slides
-	let arrCities = ['CV PRO', 'ENTRETIEN', 'COACHING']; // Change number of slides in CSS also
+	let arrCities = ['Amsterdam', 'Rome', 'New—York']; // Change number of slides in CSS also
 	let numOfCities = arrCities.length;
 	let arrCitiesDivided = [];
 
@@ -34,23 +34,21 @@ $(document).ready(function initAnimation() {
 		const numSlide = arrCities.indexOf(arrCities[city]) + 1;
 		const firstLetter = arrCitiesDivided[city][0].charAt(0);
 
-		const $slide =
-					$('<div data-target="${numSlide}" class="slide slide--${numSlide}"><div class="slide__darkbg slide--${numSlide}__darkbg"></div><div class="slide__text-wrapper slide--${numSlide}__text-wrapper"></div></div>');
+		const $slide = $('<div data-target="'+numSlide+'" class="slide slide--'+numSlide+'"><div class="slide__darkbg slide--'+numSlide+'__darkbg"></div><div class="slide__text-wrapper slide--'+numSlide+'__text-wrapper"></div></div>');
 
-		const letter = 
-					$('<div class="slide__letter slide--${numSlide}__letter">${firstLetter}</div>');
+		const letter = $('<div class="slide__letter slide--'+numSlide+'__letter">'+firstLetter+'</div>');
 
 		for (let i = 0, length = arrCitiesDivided[city].length; i < length; i++) {
 			const text = 
-						$('<div class="slide__text slide__text--${i + 1}">${arrCitiesDivided[city][i]}</div>');
+						$('<div class="slide__text slide__text--'+(i + 1)+'">'+arrCitiesDivided[city][i]+'</div>');
 			frag1.append(text);
 		}
 
-		const navSlide = $('<li data-target="${numSlide}" class="nav__slide nav__slide--${numSlide}"></li>');
+		const navSlide = $('<li data-target="'+numSlide+'" class="nav__slide nav__slide--'+numSlide+'"></li>');
 		frag2.append(navSlide);
 		$nav.append(frag2);
 
-		$slide.find('.slide--${numSlide}__text-wrapper').append(letter).append(frag1);
+		$slide.find('.slide--'+numSlide+'__text-wrapper').append(letter).append(frag1);
 		$slider.append($slide);
 
 		if (arrCities[city].length <= 4) {
