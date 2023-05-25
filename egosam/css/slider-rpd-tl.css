@@ -1,3 +1,5 @@
+/* slider-rpd-tl.css */
+
 $bgClr: rgba(#0b0f27, .83);
 $txtClr: #fff;
 $animSpd: 750 * 1ms; // Change also in JS
@@ -59,7 +61,6 @@ url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg') c
 
 #ESHomePage section.banner .slide .slide--1__darkbg {
 	left: 0%;
-  background: url("https://zbzznxxktcx7ngehlqxzuw.on.drv.tw/HOSTING/images/home-slides/cvqde-avr-2023.jpg") no-repeat;
   transform: translate3d(0, 0, 0);
   will-change: transform; 
   height: 100%; 
@@ -69,7 +70,6 @@ url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg') c
 
 #ESHomePage section.banner .slide .slide--2__darkbg {
 	left: 0%;
-  background: url("https://zbzznxxktcx7ngehlqxzuw.on.drv.tw/HOSTING/images/home-slides/watw.jpg") no-repeat;
   transform: translate3d(0, 0, 0);
   will-change: transform; 
   height: 100%; 
@@ -79,7 +79,6 @@ url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg') c
 
 #ESHomePage section.banner .slide .slide--3__darkbg {
 	left: 0%;
-  background: url("https://zbzznxxktcx7ngehlqxzuw.on.drv.tw/HOSTING/images/home-slides/svc-b-mars-2023.jpg") no-repeat;
   transform: translate3d(0, 0, 0);
   will-change: transform; 
   height: 100%; 
