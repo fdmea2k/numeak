@@ -1,1 +1,190 @@
-$(document).ready(function e(){if(document.querySelector("#ESHomePage section.banner")){$("#ESHomePage section.banner .cont");const c=$("#ESHomePage section.banner .slider"),_=$("#ESHomePage section.banner .nav");var n=$(window).width(),t=.2*n;let a=1,i=!1;let s=0,r=["Amsterdam","Rome","New—York"];var o=r.length;let l=[];r.map(e=>{var n=e.length,n=Math.floor(n/4),n=new RegExp(".{1,"+n+"}","g");l.push(e.match(n))});for(let e=0,n=o;e<n;e++)!function(t){let a=$(document.createDocumentFragment()),e=$(document.createDocumentFragment());var n=r.indexOf(r[t])+1;l[t][0].charAt(0);const i=$('<div data-target="${numSlide}" class="slide slide--${numSlide}"> <div class="slide__darkbg slide--${numSlide}__darkbg"></div><div class="slide__text-wrapper slide--${numSlide}__text-wrapper"></div></div>');var s=$('<div class="slide__letter slide--${numSlide}__letter"> ${firstLetter} </div>');for(let e=0,n=l[t].length;e<n;e++){var o=$('<div class="slide__text slide__text--${i + 1}">${arrCitiesDivided[city][i]}</div>');a.append(o)}var d=$('<li data-target="${numSlide}" class="nav__slide nav__slide--${numSlide}"></li>');e.append(d),_.append(e),i.find(".slide--${numSlide}__text-wrapper").append(s).append(a),c.append(i),r[t].length<=4&&$("#ESHomePage section.banner .slide--"+n).find(".slide__text").css("font-size","12vw")}(e);$("#ESHomePage section.banner .nav__slide--1").addClass("nav-active"),$(document).on("mousedown touchstart","#ESHomePage section.banner .slide",function(e){var n,t;i||(n=+$(this).attr("data-target"),t=e.pageX||e.originalEvent.touches[0].pageX,c.removeClass("animation"),$(document).on("mousemove touchmove",function(e){e=e.pageX||e.originalEvent.touches[0].pageX;s=t-e,1==n&&s<0||n===o&&0<s||(c.css({transform:"translate3d(-"+(100*(a-1)+s/30)+"%, 0, 0)"}),c.find("#ESHomePage section.banner .slide__darkbg").css({transform:"translate3d("+(50*(a-1)+s/60)+"%, 0, 0)"}),c.find("#ESHomePage section.banner .slide__letter").css({transform:"translate3d("+s/60+"vw, 0, 0)"}),c.find("#ESHomePage section.banner .slide__text").css({transform:"translate3d("+s/15+"px, 0, 0)"}))}))}),$(document).on("mouseup touchend",function(e){$(document).off("mousemove touchmove"),i||(s>=t?v():s<=-t?g():(u(1),setTimeout(m,750)))}),$(document).on("click","#ESHomePage section.banner .nav__slide:not(.nav-active)",function(){var e=+$(this).attr("data-target");d(e),a=e,u(1)}),$(document).on("click","#ESHomePage section.banner .side-nav",function(){var e=$(this).attr("data-target");"right"===e&&v(),"left"===e&&g()}),$(document).on("keydown",function(e){39===e.which&&v(),37===e.which&&g()}),$(document).on("mousewheel DOMMouseScroll",function(e){var n;i||((0<(n=e.originalEvent.wheelDelta)||e.originalEvent.detail<0)&&g(),(n<0||0<e.originalEvent.detail)&&v())})}else setTimeout(e,500);function d(e){$("#ESHomePage section.banner .nav__slide--"+h).removeClass("nav-active"),$("#ESHomePage section.banner .nav__slide--"+e).addClass("nav-active")}function m(){i=!1}function u(e){i=!0,k=0,c.addClass("animation"),c.css({transform:"translate3d(-"+100*(h-e)+"%, 0, 0)"}),c.find("#ESHomePage section.banner .slide__darkbg").css({transform:"translate3d("+50*(h-e)+"%, 0, 0)"}),c.find("#ESHomePage section.banner .slide__letter").css({transform:"translate3d(0, 0, 0)"}),c.find("#ESHomePage section.banner .slide__text").css({transform:"translate3d(0, 0, 0)"})}function v(){h>=o||(u(0),setTimeout(m,750),d(h+1),h++)}function g(){h<=1||(u(2),setTimeout(m,750),d(h-1),h--)}});
+/* https://freefrontend.com/css-sliders/ */
+$(document).ready(function initAnimation() {
+	/* Check script html load state */
+	if (!document.querySelector('#ESHomePage section.banner')) { 
+		setTimeout(initAnimation, 500); return ;
+	}
+	const $cont = $('#ESHomePage section.banner .cont');
+	const $slider = $('#ESHomePage section.banner .slider');
+	const $nav = $('#ESHomePage section.banner .nav');
+	const winW = $(window).width() ;
+	const animSpd = 750; // Change also in CSS
+	const distOfLetGo = winW * 0.2;
+	let curSlide = 1;
+	let animation = false;
+	let autoScrollVar = true;
+	let diff = 0;
+	
+	// Generating slides
+	let arrCities = ['CV PRO', 'ENTRETIEN', 'COACHING']; // Change number of slides in CSS also
+	let numOfCities = arrCities.length;
+	let arrCitiesDivided = [];
+
+	arrCities.map((city) => {
+		let length = city.length;
+		let letters = Math.floor(length / 4);
+		let exp = new RegExp(".{1," + letters + "}", "g");
+		
+		arrCitiesDivided.push(city.match(exp));
+	});
+	
+	let generateSlide = function(city) {
+		let frag1 = $(document.createDocumentFragment());
+		let frag2 = $(document.createDocumentFragment());
+		const numSlide = arrCities.indexOf(arrCities[city]) + 1;
+		const firstLetter = arrCitiesDivided[city][0].charAt(0);
+
+		const $slide =
+					$('<div data-target="${numSlide}" class="slide slide--${numSlide}"><div class="slide__darkbg slide--${numSlide}__darkbg"></div><div class="slide__text-wrapper slide--${numSlide}__text-wrapper"></div></div>');
+
+		const letter = 
+					$('<div class="slide__letter slide--${numSlide}__letter">${firstLetter}</div>');
+
+		for (let i = 0, length = arrCitiesDivided[city].length; i < length; i++) {
+			const text = 
+						$('<div class="slide__text slide__text--${i + 1}">${arrCitiesDivided[city][i]}</div>');
+			frag1.append(text);
+		}
+
+		const navSlide = $('<li data-target="${numSlide}" class="nav__slide nav__slide--${numSlide}"></li>');
+		frag2.append(navSlide);
+		$nav.append(frag2);
+
+		$slide.find('.slide--${numSlide}__text-wrapper').append(letter).append(frag1);
+		$slider.append($slide);
+
+		if (arrCities[city].length <= 4) {
+			$('#ESHomePage section.banner .slide--'+ numSlide).find('.slide__text').css("font-size", "12vw");
+		}
+	};
+
+	for (let i = 0, length = numOfCities; i < length; i++) {
+		generateSlide(i);
+	}
+
+	$('#ESHomePage section.banner .nav__slide--1').addClass('nav-active');
+
+	// Navigation
+	function bullets(dir) {
+		$('#ESHomePage section.banner .nav__slide--' + curSlide).removeClass('nav-active');
+		$('#ESHomePage section.banner .nav__slide--' + dir).addClass('nav-active'); 
+	}
+	
+	function timeout() {
+		animation = false;
+	}
+	
+	function pagination(direction) {
+		animation = true;
+		diff = 0;
+		$slider.addClass('animation');
+		$slider.css({
+			'transform': 'translate3d(-' + ((curSlide - direction) * 100) + '%, 0, 0)'
+		});
+		
+		$slider.find('#ESHomePage section.banner .slide__darkbg').css({
+				'transform': 'translate3d(' + ((curSlide - direction) * 50) + '%, 0, 0)'
+		});
+		
+		$slider.find('#ESHomePage section.banner .slide__letter').css({
+				'transform': 'translate3d(0, 0, 0)',
+		});
+		
+		$slider.find('#ESHomePage section.banner .slide__text').css({
+			'transform': 'translate3d(0, 0, 0)'
+		});
+	}
+	
+	function navigateRight() {
+		if (!autoScrollVar) return;
+		if (curSlide >= numOfCities) return;
+		pagination(0);
+		setTimeout(timeout, animSpd);
+		bullets(curSlide + 1);
+		curSlide++;
+	}
+	
+	function navigateLeft() {
+		if (curSlide <= 1) return;
+		pagination(2);
+		setTimeout(timeout, animSpd);
+		bullets(curSlide - 1);
+		curSlide--;
+	}
+
+	function toDefault() {
+		pagination(1);
+		setTimeout(timeout, animSpd);
+	}
+	
+	// Events
+	$(document).on('mousedown touchstart', '#ESHomePage section.banner .slide', function(e) {
+		if (animation) return;
+		let target = +$(this).attr('data-target');
+		let startX = e.pageX || e.originalEvent.touches[0].pageX;
+		$slider.removeClass('animation');
+		
+		$(document).on('mousemove touchmove', function(e) {
+			let x = e.pageX || e.originalEvent.touches[0].pageX;
+			diff = startX - x; 
+			if (target === 1 && diff < 0 || target === numOfCities && diff > 0) return;
+			
+			$slider.css({
+				'transform': 'translate3d(-' + ((curSlide - 1) * 100 + (diff / 30)) + '%, 0, 0)'
+			});
+			
+			$slider.find('#ESHomePage section.banner .slide__darkbg').css({
+				'transform': 'translate3d(' + ((curSlide - 1) * 50 + (diff / 60)) + '%, 0, 0)'
+			});
+			
+			$slider.find('#ESHomePage section.banner .slide__letter').css({
+				'transform': 'translate3d(' +  (diff / 60) + 'vw, 0, 0)',
+			});
+			
+			$slider.find('#ESHomePage section.banner .slide__text').css({
+				'transform': 'translate3d(' + (diff / 15) + 'px, 0, 0)'
+			});
+		})	
+	})
+	
+	$(document).on('mouseup touchend', function(e) {
+		$(document).off('mousemove touchmove');
+		
+		if (animation) return;
+
+		if (diff >= distOfLetGo) {
+			navigateRight();
+		} else if (diff <= -distOfLetGo) {
+			navigateLeft();
+		} else {
+			toDefault();
+		}
+	});
+	
+	$(document).on('click', '#ESHomePage section.banner .nav__slide:not(.nav-active)', function() {
+		let target = +$(this).attr('data-target');
+		bullets(target);
+		curSlide = target;
+		pagination(1);
+	});	
+	
+	$(document).on('click', '#ESHomePage section.banner .side-nav', function() {
+		let target = $(this).attr('data-target');
+		
+		if (target === 'right') navigateRight();
+		if (target === 'left') navigateLeft();
+	});
+	
+	$(document).on('keydown', function(e) {
+		if (e.which === 39) navigateRight();
+		if (e.which === 37) navigateLeft();
+	});
+	
+	$(document).on('mousewheel DOMMouseScroll', function(e) {
+		if (animation) return;
+    let delta = e.originalEvent.wheelDelta;
+		
+    if (delta > 0 || e.originalEvent.detail < 0) navigateLeft();
+	 	if (delta < 0 || e.originalEvent.detail > 0) navigateRight();
+  });
+});
