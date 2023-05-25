@@ -65,7 +65,6 @@ url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg') c
   will-change: transform; 
   height: 100%; 
   width: 100%;
-	background-size: 100%;
 }
 
 #ESHomePage section.banner .slide .slide--2__darkbg {
@@ -74,7 +73,6 @@ url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg') c
   will-change: transform; 
   height: 100%; 
   width: 100%;
-   background-size: 100%;
 }
 
 #ESHomePage section.banner .slide .slide--3__darkbg {
@@ -83,7 +81,6 @@ url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg') c
   will-change: transform; 
   height: 100%; 
   width: 100%;
-	background-size: 100%;
 }
 
 #ESHomePage section.banner .nav {
