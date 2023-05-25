@@ -1,4 +1,4 @@
-/* HOME PAGE */  
+/* HOME PAGE  : home-index.css*/  
 
 body .ESHomePageCtner {
   background: rgb(244,244,244); 
@@ -65,6 +65,18 @@ body .ESHomePageCtner {
   font-size: 1.5em; 
   display: block;
   line-height : 1.2em
+}
+
+#ESHomePage section.banner .slide .slide--1__darkbg {
+  background: url("https://raw.githubusercontent.com/fdmea2k/numeak/main/egosam/images/home-slides/cvqde-avr-2023.jpg") no-repeat;
+}
+
+#ESHomePage section.banner .slide .slide--2__darkbg {
+  background: url("https://raw.githubusercontent.com/fdmea2k/numeak/main/egosam/images/home-slides/watw.jpg") no-repeat;
+}
+
+#ESHomePage section.banner .slide .slide--3__darkbg {
+  background: url("https://raw.githubusercontent.com/fdmea2k/numeak/main/egosam/images/home-slides/svc-b-mars-2023.jpg") no-repeat;
 }
 
 /* OUR SERVICES */
@@ -192,5 +204,3 @@ body .ESHomePageCtner {
     display: block;
   }
 }
-
-
