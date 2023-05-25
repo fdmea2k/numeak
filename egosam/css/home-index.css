@@ -35,7 +35,6 @@ body .ESHomePageCtner {
 
 #ESHomePage section.banner .nav {
 	position: absolute;
-	bottom: 25px;
 	left: 50%;
 	transform: translateX(-50%);
 	list-style-type: none;
