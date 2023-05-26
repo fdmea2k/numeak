@@ -164,7 +164,7 @@ div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk li.lbk-item {
 } 
 
 div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk span.tel-blk span.tel-str {
-	
+	display: block;
 } 
 
 div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk span.tel-blk span.tel-str:before {
@@ -174,16 +174,20 @@ div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk span.tel-blk span.tel-str:before
 	margin: 0 5px 0 0;
 }
 
-div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk li.email span.tel-blk span {
-	display: inline-block;
-	width: 100%; 
+div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk li.email span.tel-blk span { 
 	box-sizing: border-box ; 
 	font-family: 'Maven Pro', sans-serif ; 
 	border: 0; 
 	padding: 2px 0;
 }
 
-div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk li.email span.tel-blk span:before {
+div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk span.tel-item, 
+div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk span.mail-item {
+	display: block; 
+	width: 100%;
+}
+
+div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk li.email span.tel-blk span.email-str:before {
 	content: '\e8c8';
 	font-family: ocis-icon-fonts ; 
 	color: #afb803 ; 
