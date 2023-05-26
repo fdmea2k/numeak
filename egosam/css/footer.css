@@ -1,3 +1,5 @@
+/* footer.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
 
 .image-attribution {
@@ -101,7 +103,7 @@ div.ESFContentBlock .menu ul.MBlk-Links li {
 } 
 
 div.ESFContentBlock .menu ul.MBlk-Links li a {
-	display: block; 
+	display: inline-block; 
 	border: 0; 
 	box-sizing: border-box ; 
 	margin: 0; 
@@ -190,14 +192,13 @@ div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk li.email span.tel-blk span:befor
 
 div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk li.email a,
 div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk li.tel a {
-	display: inline-block;
-	width: 100%; 
+	display: inline-block; 
 	box-sizing: border-box ; 
 	font-family: 'Maven Pro', sans-serif ; 
 	border: 0; 
 	padding: 0;
 	font-size: 0.9em ; 
-	color: #a6a7a9
+	color: #a6a7a9 ; 
 } 
 
 div.ESFContentBlock .ContactUS ul.C-US-ItemsBlk li.email a:hover,
