@@ -47,8 +47,12 @@ body button.back-button {
   left: 14px;
 }
 
+.blog-name.container {
+  margin: 0 !important;
+}
+
 body .header-widget h1 {
-  
+  font-size: 1.6em;
 } 
 
 body .header-widget h1 a {
